@@ -1,0 +1,10 @@
+opcion = 0
+nombre = input("Escriba su nombre: ")
+
+while opcion != 2:
+    print("1. Salude")
+    print("2. Despidase")
+    opcion = int(input("Ingrese una opcion: "))
+    if opcion == 1:
+        print("Hola "+nombre)
+print("Adios")
