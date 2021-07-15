@@ -1,0 +1,20 @@
+print(f"Bienvenido al sistema")
+print(f"Elija la opción según la operación que desee realizar")
+print(f"1.- Convertir Celsius a Fahrenheit")
+print(f"2.- Convertir Fahrenheit a Celsius")
+opcion = int(input("Ingrese la opcion: "))
+if opcion != 1:
+    print('Por favor elija una de las dos opciones')
+    print(opcion)
+if opcion != 2:
+    print('Por favor elija una de las dos opciones')
+    print(opcion)
+while opcion == 1:
+    _temperatura = float(input("Ingrese los grados en Celsius: "))
+    F = (9 / 5 * _temperatura)(+ 32)
+print('La cantidad en grados Fahrenheit es: ', F)
+while opcion == 2:
+    _temperatura = float(input("Ingrese los grados en Fahrenheit: "))
+    C = (5 / 9)(_temperatura - 32)
+print('La cantidad en grados Celsius es: ', C)
+exit()
