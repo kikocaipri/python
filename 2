@@ -1,0 +1,28 @@
+# define el numero de intentos
+INTENTOS = 3
+
+# define un dictionary que representa la base de datos
+DB = {
+    "john.smith": "abc",
+    "kate.nash": "123"
+}
+
+print(f"Weathercool Co.")
+contador = 1
+while contador <= INTENTOS:
+    usuario = str(input("Ingrese el usuario: "))
+    # verifica si el `usuario` es uno de los keys del dictionary
+    if usuario in DB:
+        contrasena = str(input(f"Ingrese la contraseña: "))
+        # compara la contrasena contra el valor asociado con el usuario
+        if contrasena == DB[usuario]:
+            print(f"Bienvenido al sistema")
+            # sale del while
+            break
+        else:
+            print("No tiene autorización para entrar")
+    else:
+        print(f"El usuario no existe")
+    # imprime linea blanca
+    print()
+    contador = contador + 1
