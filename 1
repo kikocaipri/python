@@ -1,0 +1,32 @@
+def main():
+    print(f"Bienvenido al sistema")
+    while True:
+        print(f"Elija la opción según la operación que desee realizar")
+        print(f"1.- Convertir Celsius a Fahrenheit")
+        print(f"2.- Convertir Fahrenheit a Celsius")
+        opcion = int(input("Ingrese la opcion: "))
+        if opcion == 1:
+            celsius = float(input("Ingrese los grados en Celsius: "))
+            fahrenheit = celsius_a_fahrenheit(celsius)
+            print(f"La cantidad en grados Fahrenheit es {fahrenheit}")
+            print("Programa terminado")
+            break
+        elif opcion == 2:
+            fahrenheit = float(input("Ingrese los grados en Fahrenheit: "))
+            celsius = fahrenheit_a_celsius(fahrenheit)
+            print(f"La cantidad en grados Celsius es {celsius}")
+            print("Programa terminado")
+            break
+        else:
+            print(f"La opción elegida es incorrecta.\n")
+            print(f"Por favor elige entre 1 o 2.")
+    exit()
+
+def celsius_a_fahrenheit(celsius):
+    return 9.0 / 5.0 * celsius + 32
+
+def fahrenheit_a_celsius(fahrenheit):
+    return 5.0 / 9.0 * (fahrenheit - 32)
+
+if __name__ == "__main__":
+    main()
