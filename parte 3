@@ -1,0 +1,31 @@
+
+def main():
+
+#este es el arreglo vacio
+a = []
+#el usuario ingresa la cantidad de dias
+T = int(input(f"¿Cuantos días se van a promediar? \n"))
+contador = 0
+i = 1
+#el ciclo del array
+for i in range(0, T):
+    _temperatura = float(input("Ingrese la temperatura, T= "))
+    a.append(_temperatura)
+    i += 1
+print(f"\nLas temperaturas son: ")
+print(a)
+#inciso 6.-calcular el promedio de todas las temperaturas que guarda el arreglo
+print(f"\nLa temperatura promedio es {PromedioTotal}")
+
+#estoy haciendo esta funcion para el 6.-calcular el promedio de todas las temperaturas que guarda el arreglo
+def PromedioTotal(a):
+    #sumaT=suma total del arreglo
+    sumaT = sum(a)
+    #diasT=cantidad de dias que el usuario haya ingresado
+    diasT = len(a)
+    #formula para calcular el promedio
+    promedioT = sumaT / diasT
+    return promedioT
+
+if __name__ == "__main__":
+    main()
